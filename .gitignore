@@ -27,3 +27,4 @@
 
 # Ignore files .lock
 *.lock
+/config/master.key
