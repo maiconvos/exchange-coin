@@ -28,4 +28,14 @@ $(document).ready ->
     send_request()  
 
   $('form #source_currency').change ->
-    send_request() 
+    send_request()
+
+  $('button#switch_currencies').click ->
+    current=$("#source_currency").val()
+    destination=$("#target_currency").val()
+
+    $("#source_currency").val(destination)
+    $("#target_currency").val(current)
+
+    if ($("#amount").val() )
+      send_request() 
